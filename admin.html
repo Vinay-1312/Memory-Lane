@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Memory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="admin-body">
+    <div id="auth-gate" class="auth-gate">
+      <div class="auth-card">
+        <h2>Enter Password</h2>
+        <input type="password" id="password-input" placeholder="password" />
+        <button id="auth-btn">Unlock</button>
+        <p id="auth-error" class="auth-error hidden">Wrong password</p>
+      </div>
+    </div>
+
+    <div id="admin-panel" class="admin-panel hidden">
+      <div class="admin-card">
+        <h2>Add a Memory</h2>
+
+        <label>Date
+          <input type="date" id="mem-date" />
+        </label>
+
+        <label>Description
+          <textarea id="mem-desc" rows="4" placeholder="Write something sweet..."></textarea>
+        </label>
+
+        <label>Photo or Video
+          <input type="file" id="mem-file" accept="image/*,video/*" />
+        </label>
+
+        <div id="file-preview" class="file-preview hidden"></div>
+
+        <button id="submit-btn">Save Memory</button>
+        <p id="submit-status" class="submit-status"></p>
+      </div>
+
+      <div class="admin-card">
+        <h2>Existing Memories</h2>
+        <div id="memory-list" class="memory-list">Loading...</div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/admin/admin.js"></script>
+  </body>
+</html>
